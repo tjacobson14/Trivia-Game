@@ -1,107 +1,103 @@
 body{
- 
-   background-color: whitesmoke;
-   background-repeat:no-repeat;
-   background-size:cover;    
+  background-color: whitesmoke;
+  background-repeat:no-repeat;
+  background-size:cover;    
 }
 
 #main-logo {
-   width: 40%;
-   height: 40%;
-   margin-top: 2rem;
+  width: 40%;
+  height: 40%;
+  margin-top: 2rem;
 }
 
 .display {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 3.75rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.75rem;
 }
-  #question {
-    margin-top: 1rem;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  footer {
-    height: 4rem;
-    margin-top: 30px;
-    background: goldenrod;
-    border-top: .25rem solid black;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%
-  }
-  
-  #copyright-small {
-    font-size: 12px;
-  }
-  
-  #timer {
-    margin-top: 20px;
-  }
-  
-  #done-button {
-    margin-top: 20px;
-    background: #bc143c;
-  }
 
-  #end-page {
-    display: none;
-  }
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-size: 16px;
-  }
-  
-  #end-page p {
-    font-size: 20px;
-    /* font-weight: 700; */
-    text-align: center;
-  }
-  
-  #correct-answers {
-    margin-top: 32px;
-  }
+h1 {
+  margin-bottom: 1rem;
+}
 
-  #start-page {
-      float: right;
-      margin-top: 2rem;
-  }
-
-  #torso {
-      margin-bottom: 14rem;
-  }
-
-  #hound{
-      margin-top: 2rem;
-      
-  }
-
-  #start-btn{
-    background: #bc143c;
-  }
-
-  
-
+#question {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+    
 hr {
-    display: block;
-    height: .1rem;
-    border: 0;
-    border-top: .1rem solid rgba(0, 0, 0, 0.571);
-    margin: 1em 0;
-    padding: 0; 
+  display: block;
+  height: .1rem;
+  border: 0;
+  border-top: .1rem solid rgba(0, 0, 0, 0.571);
+  margin: 1em 0;
+  padding: 0; 
 }
 
-  h2 {
-    text-align: center;
-  }
-  #timer{
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-  }
-  #questions-box{
-    margin-top: 2rem;
-  }
+#torso {
+  margin-bottom: 14rem;
+}
+
+#calvinHobbes{
+  margin-top: 2rem;     
+}
+
+#start-page {
+  float: right;
+  margin-top: 2rem;
+}
+
+#start-btn{
+  background: #bc143c;
+  display: flex;
+  justify-content: center;
+  width:8rem;
+  margin: auto;
+}  
+
+#questions-box{
+  margin-top: 2rem;
+  font-size: .95rem;
+}
+
+#done-button {
+  margin-top: 3rem;
+  background: #bc143c;
+  display: flex;
+  justify-content: center;
+  width:8rem;
+  margin: auto;
+}
+
+#end-page {
+  display: none;
+}
+
+#end-page p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#correct-answers {
+  margin-top: 2rem;
+}
+
+footer {
+  height: 4rem;
+  background: goldenrod;
+  border-top: .25rem solid black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#timer{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  padding: .50rem;
+}

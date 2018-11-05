@@ -11,7 +11,7 @@ var questionBank =
     correct: "John Calvin, Thomas Hobbes"
   },
   {
-    question: "What are the names of Calvin's parents",
+    question: "What are the names of Calvin's parents?",
     answers: ["Marvin and Molly", "Never Revealed", "Jack and Jill"],
     correct: "Never Revealed"
   },

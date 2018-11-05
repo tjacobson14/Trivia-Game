@@ -1,17 +1,13 @@
 $(document).ready(function(){
 
-    // start the game when user clicks on Start button
     $("#start-btn").on("click", game.startTimer);
   
   });
   
-  // information about the state of game play
   var game = {
-  
-    // set the time at 60 seconds, and count down by 1 second
+
     timeRemaining : 90,
   
-    // start the timer, hide the start page, show the questions
     startTimer: function() {
       $("#timer").text("Time remaining: " + game.timeRemaining);
       setInterval(game.countdown, 1000);
@@ -19,7 +15,6 @@ $(document).ready(function(){
       trivia.displayQuestions();
     },
   
-    // decrement the timer and update the UI; stop the timer at 0
     countdown: function() {
       game.timeRemaining--;
       $("#timer").text("Time remaining: " + game.timeRemaining);
@@ -29,13 +24,12 @@ $(document).ready(function(){
       }
     },
   
-    // stop the timer and check the answers
     stopTimer: function() {
       clearInterval();
       trivia.checkAnswers();
     },
   
-    // hide the quetions and display the end page with results
+   
     showTally: function(numbCorrect, numbIncorrect, numbUnanswered) {
       $("#end-page").show();
       $("#questions-box").empty();
@@ -47,10 +41,8 @@ $(document).ready(function(){
     }
   }
   
-  // functions to handle the building questions page and scoring
   var trivia = {
   
-    // pull questions from the array of questions, loop through them, and append to UI
     displayQuestions: function() {
       var divContainer = $("#questions-box");
       var answerGroup = $(".form-check");
@@ -69,13 +61,11 @@ $(document).ready(function(){
         divContainer.append('<div class="form-check"><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label class="form-check-label" id="radio'+i+'label" for="radio'+i+'">' + answer3 + '</label></div>');
       }
   
-      // add a Done button to the end of the page and register its click handler
       var doneButton = '<button class="btn btn-primary" id="done-button" type="submit">Done</button>';
       divContainer.append(doneButton);
       $("#done-button").on("click", game.stopTimer);
     },
   
-    // test if the user answers are correct, incorrect, or if there are unanswered questions
     checkAnswers: function() {
       var correctAnswer;
       var userAnswer;
@@ -83,8 +73,6 @@ $(document).ready(function(){
       var numbIncorrect = 0;
       var numbUnanswered = 0;
   
-      // loop through to compare the text of the label with the user answers
-      // increment score counts appropriately
       for (var i = 0; i < questionBank.length; i++) {
         correctAnswer = questionBank[i].correct;
         userAnswer = $('input[id=radio'+i+']:checked + label').text();
@@ -99,8 +87,6 @@ $(document).ready(function(){
           }
         }
       }
-  
-      // show the end page with the score tally
       game.showTally(numbCorrect, numbIncorrect, numbUnanswered);
     },
   }
